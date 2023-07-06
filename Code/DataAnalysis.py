@@ -5,6 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 # For Geospatial Analysis
+import webbrowser
+from geopy.geocoders import Nominatim
 import geopandas as gpd
 import folium
 # for machine learning
@@ -42,4 +44,4 @@ for index, row in data1.iterrows():
 
 # Display the map
 map.save('Data/rodent_map.html')
-
+map.show_in_browser
