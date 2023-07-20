@@ -35,3 +35,13 @@ print(RodentData.head())
 
 # Save the cleaned data
 RodentData.to_csv("/Users/thierrypierre/Documents/GitHub/AHI23Capstone/Data/Rodent_Inspection-4_cleaned.csv", index=False)
+
+
+### Idea ###
+# create a variable/column that converts the results of each inpsection into a numerical value; 
+# For Example: a column for Initial inspections, 
+# where a "Passed" result would be = 1, 
+# "Rat activity" would be = 2, 
+# and "Failed for other R" would be = 3.
+# this would be helpful when creating another layer for ARCgis and the SAS frequency tables
+
