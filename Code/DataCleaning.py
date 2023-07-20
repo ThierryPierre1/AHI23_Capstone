@@ -45,3 +45,29 @@ RodentData.to_csv("/Users/thierrypierre/Documents/GitHub/AHI23Capstone/Data/Rode
 # and "Failed for other R" would be = 3.
 # this would be helpful when creating another layer for ARCgis and the SAS frequency tables
 
+# create a variable/column that converts the results of each inpsection into a numerical value;
+# Intial Inspection
+# Passed = 1
+# Rat Activity = 2
+# Failed for other R = 3
+
+# Load the cleaned data
+CleanRodentData = pd.read_csv("/Users/thierrypierre/Documents/GitHub/AHI23_Capstone/Data/Rodent_Inspection-4_cleaned.csv")
+
+# Check the data types
+print(CleanRodentData.dtypes)
+
+# Create a new column for Initial Inspections
+CleanRodentData['INITIAL_INSPECTION'] = np.where(CleanRodentData['RESULT'] == 'Passed', 1, np.where(CleanRodentData['RESULT'] == 'Rat Activity', 2, np.where(CleanRodentData['RESULT'] == 'Failed for other R', 3, 0)))
+
+# Check the data types
+print(CleanRodentData.dtypes)
+
+# Create a new column for Compliance Inspections
+CleanRodentData['COMPLIANCE_INSPECTION'] = np.where(CleanRodentData['RESULT'] == 'Passed', 1, np.where(CleanRodentData['RESULT'] == 'Rat Activity', 2, np.where(CleanRodentData['RESULT'] == 'Failed for other R', 3, 0)))
+
+# Check the data types
+print(CleanRodentData.dtypes)
+
+# Save the cleaned data with the new columns to a new csv file
+CleanRodentData.to_csv("/Users/thierrypierre/Documents/GitHub/AHI23_Capstone/Data/Rodent_Inspection-4_cleaned.csv", index=False)
