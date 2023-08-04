@@ -71,3 +71,22 @@ print(CleanRodentData.dtypes)
 
 # Save the cleaned data with the new columns to a new csv file
 CleanRodentData.to_csv("/Users/thierrypierre/Documents/GitHub/AHI23_Capstone/Data/Rodent_Inspection-4_cleaned.csv", index=False)
+
+# Clean the NYC population data for SAS analysis
+# Read in the data
+NYC_Population = pd.read_csv("/Users/thierrypierre/Documents/GitHub/AHI23_Capstone/Data/Demographic_Statistics_By_Zip_Code.csv")
+
+# Check the data
+print(NYC_Population.head())
+
+# Check the data types
+print(NYC_Population.dtypes)
+
+# Drop missing values
+NYC_Population.dropna(inplace=True)
+
+# Check for missing values
+print(NYC_Population.isnull().sum())
+
+# Save the cleaned data
+NYC_Population.to_csv("/Users/thierrypierre/Documents/GitHub/AHI23_Capstone/Data/Demographic_Statistics_By_Zip_Code_cleaned.csv", index=False)
