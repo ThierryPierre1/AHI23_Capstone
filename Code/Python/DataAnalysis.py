@@ -45,3 +45,16 @@ for index, row in data1.iterrows():
 # Display the map
 map.save('Data/rodent_map.html')
 map.show_in_browser
+
+
+### Create a new dataset for inspection type and result based on zip code ###
+# Read in the data
+data = pd.read_csv("Data/Rodent_Inspection-4_cleaned.csv")
+
+# create a new dataset for inspection type and result based on zip code and year
+RealRodentData = data[['ZIP_CODE', 'INSPECTION_TYPE', 'RESULT', 'INSPECTION_DATE']]
+print(RealRodentData.head())
+
+# Display the data
+RealRodentData.to_csv("Data/RealRodentData.csv", index=False)
+
