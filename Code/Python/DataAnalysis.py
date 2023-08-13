@@ -57,4 +57,3 @@ print(RealRodentData.head())
 
 # Display the data
 RealRodentData.to_csv("Data/RealRodentData.csv", index=False)
-
