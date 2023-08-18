@@ -6,6 +6,7 @@ An analysis project on NYC Rodent inspection data found at https://data.cityofne
 Rodent Inspection Data - https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj
 Neighborhood Names GIS - https://data.cityofnewyork.us/City-Government/Neighborhood-Names-GIS/99bc-9p23
 Health Areas - https://data.cityofnewyork.us/Health/Health-Areas/5p78-k3zm
+Demographic Statistics By Zip Code - https://data.cityofnewyork.us/City-Government/Demographic-Statistics-By-Zip-Code/kku6-nxdu
 
 ### To access ArcGIS map: 
 https://stonybrook.maps.arcgis.com/apps/mapviewer/index.html?webmap=3fc653fcfa9149458aba82bdde19ed9f
